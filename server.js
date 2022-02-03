@@ -38,7 +38,7 @@ app.use(routes);
 
 // set up Handlebars.js as app template engine (installed by running install express-handlebars)
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
